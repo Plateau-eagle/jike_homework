@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+}
+article{
+	width: 585px;
+	height: 842px;
+	background-color: #C8EDCC;
+	position: relative;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+article section{
+	margin: 20px 60px;
+}
+article section h1{
+	margin: 0;
+	line-height: 50px;
+	text-align: center;
+}
+article section h5{
+	margin: 0;
+	font-style: 16px;
+	line-height: 30px;
+	text-align: left;
+}
+article section p{
+	margin: 0;
+	font-size: 14px;
+	text-indent: 28px;
+	line-height: 28px;
+	text-align: justify;
+	text-justify: distribute-all-lines;
+}
+
+
+
+
+
+
+
+
+

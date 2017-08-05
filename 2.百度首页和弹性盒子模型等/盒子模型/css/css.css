@@ -1,0 +1,103 @@
+/*public*/
+body{
+	margin: 0;
+}
+
+/*水平分栏(新)*/
+#box1{
+	width: 500px;
+	height: 200px;
+	background:orange;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+}
+#box1 .first{
+	-webkit-order:2;
+	height:100px;
+	background: red;
+	-webkit-flex:1;
+}
+#box1 .second{
+	-webkit-order:3;
+	height:100px;
+	background: green;
+	-webkit-flex:2;
+}
+#box1 .three{
+	-webkit-order:1;
+	height:200px;
+	background: blue;
+	-webkit-flex:3;
+}
+
+/*垂直分栏(新)*/
+#box2{
+	width: 500px;
+	height: 400px;
+	background:orange;
+	display: -webkit-flex;
+	-webkit-flex-direction:column;
+}
+#box2 .first{
+	-webkit-order:2;
+	height:100px;
+	background: red;
+	-webkit-flex:1;
+}
+#box2 .second{
+	-webkit-order:3;
+	height:100px;
+	background: green;
+	-webkit-flex:2;
+}
+#box2 .three{
+	-webkit-order:1;
+	height:200px;
+	background: blue;
+	-webkit-flex:3;
+}
+
+/*水平分栏(旧)*/
+#box3{
+	width: 500px;
+	height: 200px;
+	background:orange;
+	display: -webkit-box;
+	-webkit-box-orient:horizontal;
+}
+#box3 .first{
+	height:100px;
+	background: red;
+	-webkit-box-flex:1;
+}
+#box3 .second{
+	height:100px;
+	background: green;
+	-webkit-box-flex:2;
+}
+#box3 .three{
+	height:200px;
+	background: blue;
+	-webkit-box-flex:2;
+}
+/*垂直分栏(旧)*/
+#box4{
+	width: 500px;
+	height: 600px;
+	background:orange;
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+}
+#box4 .first{
+	background: red;
+	-webkit-box-flex:1;
+}
+#box4 .second{
+	height: 200px;
+	background: green;
+	-webkit-box-flex:2;
+}
+#box4 .three{
+	background: blue;
+	-webkit-box-flex:3;
+}

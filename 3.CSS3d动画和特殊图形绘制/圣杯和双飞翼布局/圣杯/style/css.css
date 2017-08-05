@@ -1,0 +1,47 @@
+/*public*/
+body{
+	margin: 0;
+	height: 100%;
+	min-width: 800px;
+}
+h3,p{
+	margin: 0;
+}
+.fl{
+	float: left;
+}
+.clear{
+	overflow: hidden;
+}
+
+/*container*/
+#header{
+	height: 200px;
+	background-color: orange;
+}
+#article{
+	padding:0 220px 0 200px;
+	background-color: yellowgreen;
+}
+#article .left{
+	width: 200px;
+	background-color: red;
+	margin-left: -200px;
+	position: relative;
+}
+#article .mid{
+	width: 100%;
+	background-color: blue;
+	position: relative;
+}
+#article .right{
+	width: 220px;
+	margin-left: -220px;
+     right: -220px;
+	background-color: yellow;
+	position: relative;
+}
+#footer{
+	height: 150px;
+	background-color: green;
+}

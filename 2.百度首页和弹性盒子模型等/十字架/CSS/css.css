@@ -1,0 +1,63 @@
+/*public*/
+body{margin: 0;
+	padding: 0;
+	}
+
+
+/*content*/
+#wrap{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	left:50%;
+	top:50%;
+	margin-left: -150px;
+	margin-top: 150px;
+	}
+
+.top,.right,.bot,.left,.mid{
+	width: 100px;
+	height: 100px;
+	box-shadow: 4px 4px 4px #A59FAB;
+	}
+
+.top{
+	background-color: #3E6899;
+	position: absolute;
+	left:100px;
+	top:0px;
+	box-shadow: 0px 4px 12px #A59FAB;
+	}
+
+.right{
+	background-color: #3E8435;
+	position: absolute;
+	left:200px;
+	top:100px;
+	box-shadow: -4px 0px 12px #A59FAB;
+	}
+
+.bot{
+	background-color: #803631;
+	position: absolute;
+	left:100px;
+	top:200px;
+	box-shadow: 0px -4px 12px #A59FAB;
+	}
+
+.left{
+	background-color: #573A79;
+	position: absolute;
+	left:0px;
+	top:100px;
+	box-shadow: 4px 0px 12px #A59FAB;
+	}
+
+.mid{
+	background: url(../img/wlb.ico) no-repeat 18px;
+	position: absolute;
+	left:100px;
+	top:100px;
+     box-shadow: 0px 0px 16px #A59FAB inset;
+    	}
+

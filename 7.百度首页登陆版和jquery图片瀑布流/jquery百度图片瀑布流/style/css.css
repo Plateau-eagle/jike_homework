@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+.ul1 {
+    width: 1080px; 
+    margin: 100px auto 0;
+    position: relative;
+}
+.ul1 li {
+    width: 247px;
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+}
+.ul1 li .content {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.ul1 li .content img {
+    width: 225px;
+    display: block;
+}

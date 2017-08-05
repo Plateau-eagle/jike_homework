@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历数组</title>
+</head>
+<body>
+	
+</body>
+<script>
+		var arr = ["x","a","b","m","d","a","k","m","p","j","a"];
+		// 计数器
+		var obj = {};
+		//储存索引
+		var pos = {};
+		//遍历原数组并且生成新数组
+		for(var i = 0; i< arr.length; i++){
+			var key = arr[i];
+			if(!obj[key]){
+			obj[key] = 1;
+			pos[key] = i;
+			}else{
+			obj[key] ++;
+			pos[key] += ',' + i;
+			}
+			console.log(obj);
+			console.log(pos);
+		}
+		//返回出现次数最多的字母的次数（降序排列后取第一个数字）
+		var max = obj[Object.keys(obj).sort(function(a, b) {
+    		return obj[a] <= obj[b];
+		})[0]];;
+		// 储存出现次数最多的字母
+		var arr2 = [];
+		for(var key in obj){
+			if(max<=obj[key]){
+			max=obj[key];
+			arr2.push(key);
+			}
+		}
+		// 遍历出现最多次数的字母数组并打印
+		for(var i = 0; i< arr2.length; i++){
+			var key = arr2[i];
+		console.log(key+"是出现次数最多的字母");
+		console.log(key+"出现的次数为"+max);
+		console.log(key+"出现最多字符位置分别在"+pos[key]);
+		}
+</script>
+</html>

@@ -1,0 +1,571 @@
+/*PC端显示，移动端隐藏*/
+@media screen  and (min-width: 600px){
+.pc{
+	display: block;
+}
+.iphone{
+	display: none;
+}
+}
+/*移动显示，PC端隐藏*/
+@media screen  and (max-width: 600px){
+.pc{
+	display: none;
+}
+.iphone{
+	display: block;
+}
+}
+/*public*/
+html{
+	height: 100%;
+}
+body{
+	background-color: #ffffff;
+	font: 12px Arial;
+	margin:0;
+	height: 100%;	
+}
+ul{
+	margin:0;
+	padding:0;
+}
+button{
+	border:none;
+	padding: 0;
+}
+p{margin: 0;}
+li{
+	list-style: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear:both;
+}
+
+/*pc*/
+.pc{
+	position: relative;
+	min-width: 100%;
+	min-height: 600px;
+	height: 100%;
+}
+
+/*header*/
+.header {
+	overflow: hidden;
+
+}
+.header .nav{
+	width: 493px;
+	height: 24px;
+	float: right;
+	margin: 19px 0 5px 0;
+}
+.header .nav .mnav{
+	display: inline;
+	float: left;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 24px;
+	margin-left: 20px;
+	color: #333333;
+}
+a.mnav:hover
+{ 
+color:#0000cc;
+}
+
+.header .nav .lg,.set{
+	display: inline;
+	float: left;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 24px;
+	margin-left: 20px;
+	color: #333333; 
+}
+a.lg:hover
+{ 
+color:#0000cc;
+}
+a.set:hover
+{ 
+color:#0000cc;
+}
+.header .nav .more{
+	display: inline;
+	float: right;
+	width: 60px;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 24px;
+	margin:0 12px 0 19px;
+	color: #FFFFFF;
+	background-color: #38f;
+	text-decoration: none;
+	text-align: center;
+}
+.header .bd_more{
+	width: 85px;
+	height: 100%;
+	border-left: 1px solid #e7e7e7;
+	background-color: #f9f9f9;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display:none;
+	z-index: 99;
+}
+.header .bd_more .more_p{
+	color: #333;
+     text-align: center;
+     width: 66px;
+     height: 43px;
+     line-height: 43px;
+     padding-top: 9px;
+     margin: 0 auto;
+     border-bottom: #f0f0f0 1px solid;
+     font-size: 13px;
+}
+.header .bd_more li{
+	width: 66px;
+     height: 76px;
+	border-bottom: #f0f0f0 1px solid;
+	margin: 0 auto;
+	text-align: center;
+}
+.header .bd_more li a{
+	display: block;
+     text-align: center;
+     margin: 0 auto;
+     text-decoration: none;
+     overflow: hidden;
+}
+.header .bd_more li a:hover{
+	text-decoration: underline;
+}
+.header .bd_more li a:visited{
+	color: #666;
+}
+.header .bd_more li .music{
+	display: block;
+	width: 40px;
+     height: 36px;
+     margin: 10px auto 5px;
+     color: #00c;
+	background:url(../img/bd_sidebar_bg.png) no-repeat -72px 0;
+}
+.header .bd_more li .pic{
+	display: block;
+	width: 36px;
+     height: 36px;
+     margin: 10px auto 5px;
+     color: #00c;
+	background:url(../img/bd_sidebar_bg.png) no-repeat -112px 0;
+}
+.header .bd_more li .knowledge{
+	display: block;
+	width: 36px;
+     height: 36px;
+     margin: 10px auto 5px;
+     color: #00c;
+	background:url(../img/bd_sidebar_bg.png) no-repeat -36px 0;
+}
+.header .bd_more li .wenku{
+	display: block;
+	width: 36px;
+     height: 36px;
+     margin: 10px auto 5px;
+     color: #00c;
+	background:url(../img/bd_sidebar_bg.png) no-repeat -148px 0;
+}
+.header .bd_more li .fyb{
+	display: block;
+	width: 36px;
+     height: 36px;
+     margin: 10px auto 5px;
+     color: #00c;
+	background:url(../img/bd_sidebar_bg.png) no-repeat -184px 0;
+}
+
+.header .bd_more .all{
+	margin-top: 15px;
+     overflow: hidden;
+}
+.header .bd_more .all a{
+	display: block;
+     text-align: center;
+     width: 66px;
+     height: 76px;
+     margin: 0 auto;
+     color: #666;
+     text-decoration: underline;
+     overflow: hidden;
+}
+
+/*article*/
+.article{
+	position: relative;
+}
+.article .logo{
+	width: 100%;
+	text-align: center;
+}
+.article .logo img{
+	width: 270px;
+	height: 129px;
+
+}
+.article #form{
+	font-size: 0px;
+	margin: 22px auto 0;
+     width: 641px;
+     height: 37px;
+     text-align: left;
+     position: relative;
+}
+.article #form .search{
+	display: inline-block;
+	width: 539px;
+	height: 34px;
+	border:1px solid #b8b8b8;
+	border-right: none;
+	position: relative;
+}
+.article #form .search:hover{
+	border-color: #38f;
+}
+.article #form input{
+	border: 0 none;
+	width: 500px;
+	height: 22px;
+	margin: 6px 0 0 7px;
+	outline:medium;
+	letter-spacing: 1px;
+}
+.article #form .search_btn{
+	position: absolute;
+     right: 11px;
+     top: 50%;
+     margin-top: -8px;
+     height: 16px;
+     width: 18px;
+     background:url(../img/camera_new.png) no-repeat;
+}
+.article button{
+	width: 100px;
+     height: 36px;
+     color: white;
+     font-size: 15px;
+     background: #3385ff;
+     position: absolute;
+     top: 0px;
+     left: 540px;
+     cursor: pointer;
+}
+.article button:hover{
+	background-color: #317ef3;
+	box-shadow: 1px 1px 1px #ccc;
+}
+
+/*footer*/
+.footer{
+	width: 100%;
+	position: absolute;
+	bottom: 23px;
+}
+.footer .footer_wrap{
+	width: 640px;
+	height: 70px;
+	margin: auto;
+}
+.footer ul{
+	width: 277px;
+	height: 60px;	
+}
+.footer ul li{
+	width: 122px;
+	height: 60px;
+}
+.footer ul li .text{
+	line-height: 23px;
+	color: #666;
+	padding:8px 0 0 10px;
+}
+.footer ul .code{
+	margin-left: 33px;
+}
+.footer .copr{
+	width: 328px;
+	height: 70px;
+	margin-left: 33px;
+	line-height: 22px;
+	color: #999;
+}
+.footer .copr a{
+	color: #999;
+}
+.footer .copr .fnav{
+	display: inline-block;
+	margin-left: 25px;	
+}
+
+/*iphone*/
+.iphone{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.iphone header{
+	background-color: #F8F8F8;
+}
+.iphone header .user_wrap{
+	position: relative;
+     height: 35px;
+     margin-bottom: 9px;
+}
+.iphone header .user_wrap .weather_wrap{
+	position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 1;
+     padding: 0 6px 0 14px;
+     height: 40px;
+     line-height: 40px;
+}
+.iphone header .user_wrap .weather_wrap span,
+.iphone header .user_wrap .weather_wrap .weather_ad{
+	display: inline-block;
+}
+.iphone header .user_wrap .weather_wrap .fa-snowflake-o{
+	color: #b7babe;
+     font-size: 28px;
+     position: relative;
+     top: 0;
+     width: auto;
+     line-height: 28px;
+     margin-left: -1px;
+}
+.iphone header .user_wrap .weather_wrap .weather_num{
+	padding-left: 4px;
+	padding-right: 2px;
+	font-size: 29px;
+	color: #999;
+}
+.iphone header .user_wrap .weather_wrap .weather_ad p{
+	height: 14px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #999;
+}
+.iphone header .user_wrap .weather_wrap .fa-angle-down{
+	font-size: 20px;
+	color: #999;
+}
+.iphone header .user_wrap .hf{
+	width:70px;
+	height: 28px;
+	position: absolute;
+     top: 4px;
+     right: 10px;
+}
+.iphone header .user_wrap .hf .fa-user-o{
+	font-size: 28px;
+     padding: 3px;
+     padding-right: 0;
+     color: #999;
+     line-height: 20px;
+}
+.iphone header .user_wrap .hf .fa-user{
+	font-size: 28px;
+     padding: 3px;
+     padding-left: 8px;
+     color: #999;
+     line-height: 20px;
+}
+.iphone header .logo{
+	height: 57px;
+	margin-bottom: 17px;
+	text-align: center;
+}
+.iphone header .logo img{
+	width: 181px;
+	height: 57px;
+}
+.iphone header form{
+	margin: 0 16px;
+     height: 45px;
+     background: #fff;
+     border: 1px solid #d2d2d2;
+     -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
+     box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
+     -webkit-border-radius: 2px;
+     border-radius: 2px;
+     position: relative;
+}
+.iphone header form .search{
+	display: -webkit-box;
+     display: box;
+     width: 100%;
+}
+.iphone header form .search:hover{
+	border-color: #38f;
+}
+.iphone header form .search input{
+	width: 100%;
+	-webkit-border-radius: 0;
+     border-radius: 0;
+     margin: 0;
+     padding: 7px 42px 7px 6px;
+     height: 45px;
+     line-height: 28px;
+     resize: none;
+     overflow: hidden;
+     border: 0 none;
+     box-sizing: border-box;
+     outline: none;
+}
+.iphone header form .fa-sort-desc{
+	position: absolute;
+     top: 9px;
+     right: 92px;
+     font-size: 20px;
+}
+.iphone header form button{
+	width: 82px;
+     height: 45px;
+     color: #ffffff;
+     background: #3385ff;
+     line-height: 45px;
+     font-size: 16px;
+     border-top: 1px solid #38f;
+   	border-bottom: 1px solid #38f;
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     cursor: pointer;
+}
+.iphone header nav{
+	width:100%;
+	padding: 19px 0 19px;
+}
+.iphone header nav ul{
+	overflow: hidden;
+     width: 100%;
+     position: relative;
+     padding: 0 23px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: box;
+     display: flexbox;
+     display: flex;
+     -webkit-flex-direction: row;
+     flex-direction: row;
+    /* -webkit-box-pack: justify;
+     box-pack: justify;*/
+     -webkit-justify-content: space-between;
+     justify-content: space-between;
+}
+.iphone header nav ul li{
+	float: left;
+	height: 43px;
+	width: 28px;
+}
+.iphone header nav ul li a{
+	display: block;
+	height: 43px;
+	width: 28px;
+	color: #999999;
+	text-decoration: none;
+}
+.iphone header nav .control{
+	text-align: center;
+	margin-top: 20px;
+}
+.iphone header nav .control .fa-circle{
+	color: #E0E0E0;
+	font-size: 12px;
+}
+.iphone header nav .control .active{
+	color: #B0B0B0;
+}
+
+/*iphone article*/
+.iphone article{
+	margin: 0 16px;
+}
+.iphone article section{
+	padding: 12px 0;
+	border-bottom: 1px solid #F0F0F0;
+}
+.iphone article section.last{
+	border: 0;
+}
+.iphone article section a{
+	color: #333333;
+	text-decoration: none;
+}
+.iphone article section a h2{
+	margin: 0;
+	font-weight: normal;
+     font-size: 18px;
+     line-height: 26px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+}
+.iphone article section .img_group{
+	float: left;
+	width: 100%;
+}
+.iphone article section .img_group .img_wrap{
+	width: 33.333%;
+	float: left;
+}
+.iphone article section .img_group .img_wrap img{
+	width: 100%;
+	height: 100%;
+}
+.iphone article section .media{
+	margin-top: 4px;
+	color: #D9D9D9;
+}
+.iphone article .more{
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 24px 0;
+	color: #ABABAB;
+
+}
+/*footer*/
+.iphone footer{
+	background-color: #F8F8F8;
+	text-align: center; 
+}
+.iphone footer a{
+	display: block;
+	text-decoration: none;
+	color: #ABABAB;
+	font-size: 14px;
+	line-height: 24px;
+
+}
+.iphone footer a.record{
+	padding: 6px 0 20px;
+}
+
+
+
+
+

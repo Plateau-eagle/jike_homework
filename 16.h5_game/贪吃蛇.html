@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>贪吃蛇第一版</title>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="800" height="800" style="border: 1px solid black;">看不见</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		//贪吃蛇
+		
+		//1.创建蛇对象
+		var snake = {
+			x: -40,					//初始位置的x坐标
+			y: 0,					//初始位置的y坐标
+			w:40,					//一个方块的宽度
+			h:40,					//一个方块的高度
+			headColor:"cyan",		//头部颜色
+			bodyColor:"aquamarine",		//身体颜色
+			bodyPositions:[],		//身体的位置数组
+			
+			left:false,				//方向
+			right:true,				//初始方向为true
+			top:false,
+			bottom:false,
+			
+			con: true //是否需要删掉第一个元素(视觉上的最后一个方块)
+		};
+		//绘制头部
+		snake.drawHead = function () {
+			ctx.fillStyle = this.headColor;
+			ctx.fillRect(this.x,this.y,this.w,this.h);
+		};
+		//绘制身体
+		snake.drawBody = function () {
+			ctx.fillStyle = this.bodyColor;
+			for (var i = 0 ; i < this.bodyPositions.length; i++) {
+				//从后向前绘制
+				var posi = this.bodyPositions[i];
+				ctx.fillRect(posi.x,posi.y,this.w,this.h);
+			}
+		};
+		//记录位置
+		snake.savePosition = function () {
+			this.bodyPositions.push({				//添加位置  就是现在走的位置 都记录到数组里面(简单说就是将位置对象添加到数组中)
+				x:this.x,
+				y:this.y
+			});
+			if (this.bodyPositions.length>3 && this.con) {		//记录的位置有限制也就是蛇的身长的长度
+				this.bodyPositions.shift();			//shift()删除数组第一个元素并返回
+			}else {
+				//吃到食物就什么都不做,数组就会多一个元素
+				this.con = true;
+			}
+		};
+		//移动
+		snake.move = function () {
+			if (this.left) {
+				this.x -= this.w;
+			} else if(this.right){
+				this.x += this.w;
+			}else if (this.top) {
+				this.y -= this.h;
+			}else if (this.bottom) {
+				this.y += this.h;
+			}
+			//绘制,并记录新位置
+			this.drawHead();
+			this.drawBody();
+			this.savePosition();
+		}
+		
+		//创建食物对象
+		var food = {
+			x:0,
+			y:0,
+			w:40,
+			h:40,
+			color:"black"
+		};
+		
+		//绘制食物方块
+		food.draw = function () {
+			ctx.fillStyle = this.color;
+			ctx.fillRect(this.x,this.y,this.w,this.h);
+		};
+		//确定食物的位置
+		food.setPosition = function () {
+			while (true){
+				var x = fnRandom((canvas.width - this.w) / this.w,0) * this.w;
+				var y = fnRandom((canvas.height - this.h) / this.h,0) * this.h;
+				for (var i = 0; i < snake.bodyPositions.length; i++) {
+					var posi = snake.bodyPositions[i];
+					if (posi.x == x && posi.y == y) {
+						break;
+					}
+				}
+				//如果能执行到这里,说明
+				//1.跟body里面的位置有相同的,中途break了
+				//2.跟body里面的位置完全不同,i的值和数组的长度相同
+				if (i == snake.bodyPositions.length) {
+					//如果是2这种情况,说明得到了我们想要的位置,就跳出while循环,读取x,y的值
+					break;
+				}
+			}
+			this.x = x;
+			this.y = y;
+		}
+		//随机数
+		function fnRandom (max,min) {
+			return parseInt(Math.random() * (max - min +1) + min);
+		}
+		//碰撞
+		function collide (obj1,obj2) {
+			var l1 = obj1.x;				//left
+			var r1 = l1 + obj1.w;		//right
+			var t1 =obj1.y;				//top
+			var b1 = t1 + obj1.h;			//bottom
+			
+			var l2 = obj2.x;
+			var r2 = l2 + obj2.w;
+			var t2 = obj2.y;
+			var b2 = t2 + obj2.h;
+			//r1 > l2 && r2 > l1 && t1 > b2 && t2 > b1
+			if (r1 <= l2 || r2 <= l1 || t1 >= b2 || t2 >= b1) {
+				return false;
+			}else {
+				return true;
+			}
+		}
+		
+		//控制蛇移动
+		
+		document.onkeydown = function (ev) {
+			var evObj = ev || window.event;
+			//判断操作
+			switch (event.keyCode){
+				case 37:
+					if (!snake.right) {
+						snake.left = true;
+						snake.right = false;
+						snake.top = false;
+						snake.bottom = false;
+					}
+					break;
+				case 39:
+					if (!snake.left) {
+						snake.right = true;
+						snake.left = false;
+						snake.top = false;
+						snake.bottom = false;
+					}
+					break;
+				case 38:
+				if (!snake.bottom) {
+						snake.top = true;
+						snake.bottom = false;
+						snake.left = false;
+						snake.right = false;
+				}
+					break;
+				case 40:
+				if (!snake.top) {
+						snake.bottom = true;
+						snake.top = false;
+						snake.left = false;
+						snake.right = false;
+				}
+					break;
+				default:
+					break;
+			}
+		}
+		//碰壁
+		snake.fill = function () {
+			if(snake.x>800 || snake.y>800 || snake.x<0 || snake.y<0){ 
+			alert("game over! Restart?");window.location.reload(); 
+			} 
+			
+			for(var i=0;i<snake.bodyPositions.length-1;i++){ 
+				var bodys = snake.bodyPositions[i]; 
+			if(bodys.x==snake.x && bodys.y==snake.y){
+			alert("吃自己咯");window.location.reload(); 
+			} 
+			} 
+		}
+		setInterval(function () {
+			//清空定时器
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			//移动
+			food.draw();
+			snake.move();
+			snake.fill();
+			//判断是否吃到食物
+               //food.setPosition();
+			if (collide(snake,food)) {
+				food.setPosition();
+				snake.con = false; //当吃到食物,停止删除一次
+			}
+		},150)		
+	</script>
+</html>

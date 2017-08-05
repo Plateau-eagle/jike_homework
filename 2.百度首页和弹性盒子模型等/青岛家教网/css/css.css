@@ -1,0 +1,140 @@
+/*public*/
+
+body {
+    background-color: #0D7792;
+}
+
+p,
+h4 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    width: 710px;
+    background-color: #FFFFFF;
+    border-radius: 28px;
+    margin: 0 auto;
+}
+
+
+/*header*/
+
+#header {
+    width: 652px;
+    height: 82px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header .logo {
+    width: 220px;
+    height: 82px;
+    float: left;
+}
+
+#header .logo img {
+    padding: 3px 0;
+}
+
+#header p {
+    width: 432px;
+    height: 16px;
+    float: right;
+    padding-top: 66px;
+}
+
+#header p a {
+    color: #FF0099;
+    position: relative;
+    right: -288px;
+}
+
+
+/*table*/
+
+table {
+    width: 636px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #B8B8B8;
+}
+
+th,
+td {
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 20px;
+    text-indent: 2em;
+}
+
+caption {
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.col0 {
+    color: #003399;
+    background-color: #EEEEEE;
+    text-align: left;
+}
+
+.col1 {
+    width: 132px;
+    padding: 2px;
+    text-indent: 0em;
+    text-align: right;
+}
+
+span {
+    color: #FF0000;
+    vertical-align: middle;
+}
+
+.col2 {
+    text-align: left;
+    text-indent: 0em;
+    color: #0000ff;
+}
+
+form {
+    padding: 2px 0;
+}
+
+input {}
+
+textarea {
+    width: 450px;
+    height: 94px;
+}
+
+h4 {
+    margin: 2px;
+    color: #000000;
+    display: inline-block;
+}
+
+.form1 {
+    display: inline-block;
+}
+
+.form2 {
+    color: #000000;
+}
+
+
+/*footer*/
+
+footer p {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}

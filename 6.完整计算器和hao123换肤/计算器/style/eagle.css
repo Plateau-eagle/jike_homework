@@ -1,0 +1,46 @@
+.calcultor{
+	width: 420px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	background: url(../image/bg.png) repeat-y;
+	margin: 0 auto;
+}
+.calcultor .wrap{
+	margin: 30px 10px;
+}
+.calcultor .wrap p{
+	width: 400px;
+	height: 100px;
+	margin: 0;
+	background-color: #000000;
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 100px;
+	color: #fff;
+	text-align: right;
+	overflow: hidden;
+}
+.calcultor .wrap ul{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.calcultor .wrap ul li{
+	float: left;
+	list-style: none;
+	width: 80px;
+	height: 80px;
+	background-color: #D2D3D7;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+}
+.calcultor .wrap ul li.clear,.calcultor .wrap ul li.back,.calcultor .wrap ul li.zero{
+	width: 160px;
+	height: 80px;
+}
+

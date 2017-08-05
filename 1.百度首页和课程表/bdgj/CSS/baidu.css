@@ -1,0 +1,17 @@
+/*public*/
+body{font: 12px/14px Arial;}
+
+/*header*/
+header {overflow: hidden;}
+header nav{width: 420px;float: right;}
+header nav a{margin-left: 15px;}
+
+/*article*/
+article{height: 400px;text-align: center;}
+article img{width: 270px;height: 129px;}
+article input{width: 450px;height: 34px;}
+article button{width: 100px;height: 40px;}
+
+/*footer*/
+footer{text-align: center;}
+footer p{}

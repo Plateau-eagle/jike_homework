@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>标准盒模型</title>
+</head>
+<style>
+body{
+	margin: 0;
+}
+.box1{
+	margin:50px 100px 50px 100px;
+	padding:10px;
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	border:5px solid red;
+}
+.shoes1{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+.box2{
+	margin:50px 50px 50px 100px;
+	padding:10px;
+	width: 130px;
+	height: 130px;
+	background-color: aqua;
+	border:5px solid red;
+	box-sizing:border-box;
+}
+.shoes2{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+</style>
+<body>
+	<div class="box1">
+		<div class="shoes1">标准盒</div>
+	</div>
+<hr>
+	<div class="box2">
+		<div class="shoes2">怪异盒</div>
+	</div>
+</body>
+</html>

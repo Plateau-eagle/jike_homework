@@ -1,0 +1,137 @@
+@border-color: #3E302D;
+@border-width: 30px;
+@word-color: #fff;
+@red: red;
+.write-mode {
+    writing-mode: tb-rl;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    overflow: hidden;
+}
+
+.conner (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.active {
+    background-color: @red;
+    color: @word-color;
+    .conner
+}
+
+.container {
+    width: 500px;
+    padding-bottom: 20px;
+    border: @border-width solid @border-color;
+    header {
+        border-bottom: @border-width solid @border-color;
+        height: 20%;
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: @border-color;
+            padding-top: 20px;
+            line-height: 60px;
+            text-align: center;
+        }
+        p {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    article {
+        .bus-station {margin-top: 4px;
+            .bus-path {
+                .num {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 28px;
+                    line-height: 40px;
+                    background-color: @red;
+                    font-weight: bold;
+                    color: @word-color;
+                    text-align: center;
+                    .conner(@radius: 50%)
+                }
+                .road {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 5px;
+                    line-height: 40px;
+                    font-weight: bold;
+                    color: @red;
+                }
+                .bus-notice {
+                    height: 20px;
+                    width: 400px;
+                    background-color: @border-color;
+                    margin-top: 10px;
+                    .this-station {
+                        display: inline-block;
+                        color: @word-color;
+                    }
+                    .next-station {
+                        display: inline-block;
+                        color: @word-color;
+                    }
+                }
+            }
+            .site {
+                display: -webkit-flex;
+                display: flex;
+                margin: 0;
+                padding: 10px;
+                background-color: @word-color;
+                li {
+                    .write-mode
+                }
+            }
+            .bus-direction-line {
+                height: 20px;
+                width: 420px;
+                margin-left: 5px;
+                background-color: @border-color;
+                .time {
+                    display: inline-block;
+                    float: left;
+                    height: 20px;
+                    color: @word-color;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                .arrow {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid @border-color;
+                    border-left: 30px solid transparent;
+                    border-right: 30px solid transparent;
+                    -webkit-transform-origin: 4px 4px;
+                    -moz-transform-origin: 4px 4px;
+                    -o-transform-origin: 4px 4px;
+                    -ms-transform-origin: 4px 4px;
+                    -webkit-transform: rotateZ(45deg);
+                    -moz-transform: rotateZ(45deg);
+                    -o-transform: rotateZ(45deg);
+                    -ms-transform: rotateZ(45deg);
+                    position: relative;
+                    left: 96px;
+                    top: -21px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+/*public*/
+body{
+	margin: 0;
+	height: 100%;
+	min-width: 800px;
+}
+h3,p{
+	margin: 0;
+}
+.fl{
+	float: left;
+}
+
+/*container*/
+#header{
+	height: 200px;
+	background-color: orange;
+}
+#article{
+	overflow: hidden;
+}
+.mid{
+	width: 100%;
+	
+}
+.mid_inner{
+	margin:0 300px 0 200px;
+	background-color: blue;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+}
+.left{
+	width: 200px;
+	background-color: red;
+	margin-left: -100%;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+}
+.right{
+	width: 300px;
+	margin-left: -300px;
+	background-color: yellow;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+}
+#footer{
+	height: 150px;
+	background-color: green;
+}

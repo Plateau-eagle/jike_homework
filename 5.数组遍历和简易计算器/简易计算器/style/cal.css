@@ -1,0 +1,37 @@
+.calcultor{
+	width: 400px;
+	height: 100px;
+	border-radius: 4px;
+	border: 1px solid #F0F0F4;
+	background-color: #F0F0F4;
+}
+.calcultor .wrap{
+	margin: 0 10px;
+	overflow: hidden;
+}
+.calcultor .wrap #result{
+	width: 380px;
+	height: 40px;
+	margin: 10px 0;
+	background-color: #ffffff;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 40px;
+}
+.calcultor input{
+	width: 100px;
+	height: 30px;
+	border-radius: 4px; 
+	outline: none;
+}
+.calcultor #selt{
+	width: 100px;
+	height: 30px;
+	border-radius: 4px; 
+	font-size: 20px;
+}
+.calcultor #btn{
+	width: 30px; 
+	height: 30px;
+	float: right;
+}
