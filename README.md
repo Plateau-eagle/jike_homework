@@ -1,8 +1,6 @@
 this is my first commit!
 
 this is my homework ,when i learn web page development in jike college!
-<<<<<<< HEAD
-=======
 
 目录
 任务 1: 学会基本的HTML(5)标签骨架以及基本服务器概念
